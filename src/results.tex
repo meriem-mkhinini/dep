@@ -1,0 +1,191 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{sectsty}
+\usepackage[english]{babel}
+\usepackage[sort]{natbib}
+\usepackage[top=2cm,left=2cm,bottom=2cm,right=2cm]{geometry}
+\usepackage{amsmath,amsthm}
+\usepackage{rotating}
+\usepackage{multirow}
+%\usepackage[draft]{graphicx}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{float}
+\usepackage{subfig,caption}
+\usepackage{footnote}
+\usepackage{appendix}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage[dvipsnames,dvipdfm,pdftex,table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+
+
+
+\usepackage[
+hyperfootnotes=false,
+colorlinks,
+citecolor=blue,
+urlcolor=black,
+pdfauthor={Renato Vimieiro & Pablo Moscato},
+pdfkeywords={frequent pattern mining, data mining,
+				 disjunction, disjunctive patterns, emerging patterns, associative classifier,
+				 contrast pattern mining},
+pdftitle={A new method for mining disjunctive emerging patterns in high-dimensional datasets using hypergraphs}
+	 ]{hyperref}
+\usepackage[all]{hypcap} % Fix hyperref links to figures and tables (link to figure/table not caption)
+
+
+%Redefining Float env for the Appendix
+\floatstyle{plain}
+\newfloat{suptable}{thbp}{out}
+\floatname{suptable}{Supplementary Table}
+\newfloat{supfigure}{thbp}{out}
+\floatname{supfigure}{Supplementary Figure}
+
+
+\title{A new method for mining disjunctive emerging patterns in high-dimensional datasets using hypergraphs\\[0.5cm]
+\large Supplementary Material -- Extra figures and tables with computational performance of the algorithms}
+\author{\small Renato Vimieiro and Pablo Moscato\\
+\small Centre for Bioinformatics, Biomarker Discovery and Information-Based Medicine\\
+\small The University of Newcastle\\
+\small Hunter Medical Research Institute\\
+\small Lot 1, Kookaburra Circuit, New Lambton Heights, NSW, 2305, Australia.\\ 
+\small Email: \{renato.vimieiro, pablo.moscato\}@newcastle.edu.au
+}
+\date{}
+
+\sectionfont{\normalsize}
+
+\begin{document}
+
+\maketitle
+
+\appendix
+
+\section*{Figures for the experiments assessing the performance of our approach using different algorithms 
+for identifying minimal transversals}
+\label{apsec:figperf}
+
+\subsection*{Good datasets}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.65]{all_aml_ef}
+\end{center}
+\caption{Performance of the algorithms with the data set ALL-AML discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:allamlef}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{colon_ef}
+\end{center}
+\caption{Performance of the algorithms with the data set Colon discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:colonef}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{colon_ew}
+\end{center}
+\caption{Performance of the algorithms with the data set Colon discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:colonef}
+\end{figure}
+
+\clearpage
+\subsection*{Average datasets}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.65]{all_aml_ew}
+\end{center}
+\caption{Performance of the algorithms with the data set ALL-AML discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:allamlef}
+\end{figure}
+
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.65]{leukemia_ef}
+\end{center}
+\caption{Performance of the algorithms with the data set Leukemia discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:leukemiaef}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.65]{leukemia_ew}
+\end{center}
+\caption{Performance of the algorithms with the data set Leukemia discretized with equal width.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:leukemiaew}
+\end{figure}
+
+\clearpage
+\subsection*{Bad datasets}
+
+\begin{figure}[htb]
+\begin{center}
+\includegraphics[scale=0.65]{lymphoma_ef}
+\end{center}
+\caption{Performance of the algorithms with the data set Lymphoma discretized with equal frequency.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\label{qcep:fig:lymphomaef}
+\end{figure}
+
+\begin{figure}
+\label{qcep:fig:lymphomaew}
+\begin{center}
+\includegraphics[scale=0.65]{lymphoma_ew}
+\end{center}
+\caption{Performance of the algorithms with the data set Lymphoma discretized with equal width.
+The suffix `1T' attached to RS and DFS indicates that only one hypergraph was processed a time (the
+sequential version); no suffix indicates 8 hypergraphs were processed a time (parallel version).
+Numbers on the right-hand side y-axis indicate the number of bins used to discretize the data.}
+\end{figure}
+
+\clearpage
+\section*{Tables with the performance results for mining disjunctive emerging patterns using hypergraphs}
+\label{qcep:appendix:tables}
+
+\subsection*{Good datasets}
+
+\input{all_aml_ef_perf}
+\input{colon_ew_perf}
+\input{colon_ef_perf}
+%\clearpage
+
+\subsection*{Average datasets}
+\input{all_aml_ew_perf}
+\input{leukemia_ef_perf}
+\input{leukemia_ew_perf}
+
+%\clearpage
+\pagebreak
+\subsection*{Bad datasets}
+\input{lymphoma_ef_perf}
+\pagebreak
+\input{lymphoma_ew_perf}
+
+\end{document}
+
